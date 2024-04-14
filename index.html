@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" href="icon.png">
+    
+</head>
+<body>
+    <div id="weather-container">
+        <h2>Weather Forecast</h2>
+        <input type="text" id="city" placeholder="Enter city">
+        <button onclick="getWeather()" id="displayDateBtn">Search</button>
+        
+        <img id="weather-icon" alt="Weather Icon">
+
+        <div id="temp-div"></div>
+
+        <div id="weather-info"></div>
+
+        <div id="hourly-forecast"></div>
+        
+            
+              
+        <p id="date"></p>
+           
+        
+
+    </div>
+    <p id="date"></p>
+
+  <script>
+    
+    function displayDate() {
+      var today = new Date();
+      var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+      var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      var dateTime = "Date: "+date+" Time: "+time+" IST";
+      document.getElementById('date').innerHTML = dateTime;
+    }
+
+    
+    document.getElementById('displayDateBtn').addEventListener('click', displayDate);
+  </script>
+    
+    <script src="./script.js"></script>  
+    
+
+    
+</body>
+</html>
